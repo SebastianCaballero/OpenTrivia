@@ -1,8 +1,10 @@
 function getData() {
     let totalQuestions = document.getElementById('questions').value;
     let category = document.getElementById('control').value;
+    let difficult = document.getElementById('difficult').value;
+    let typeQ = document.getElementById('typeQuestion').value;
 
-    fetch(`https://opentdb.com/api.php?amount=${totalQuestions}&category=${category}`)
+    fetch(`https://opentdb.com/api.php?amount=${totalQuestions}&category=${category}&difficulty=${difficult}&type=${typeQ}`)
     .then(response => response.json())
     .then(data => printData(data));
 }
