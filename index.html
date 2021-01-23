@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Trivia</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="#" onsubmit="event.preventDefault(), getData()">
+                            <div class="form-group">
+                                <label for="questions">Cantidad de Preguntas</label>
+                                <select class="form-control" id="questions">
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                    <option value="50">50</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="control">Category</label>
+                                <select class="form-control" id="control">
+                                    
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Obtener Preguntas</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" id="questions-container">
+            
+        </div>
+        <button class="btn btn-primary" onclick="getData()">
+            Mostrar Preguntas
+        </button>
+    </div>
+
+
+    <script src="./api.js"></script>
+</body>
+</html>
